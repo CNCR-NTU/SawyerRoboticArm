@@ -8,7 +8,7 @@ Various programs made to use the Sawyer robotic arm. The codes are available in 
     It is made to run on the following configuration :
 	Ubuntu 16.04 64bit
 	ROS Kinetic
-	Gazebo 7 (bit default, installed with ROS kinetic full) /!\
+	Gazebo 7 (by default, installed with ROS kinetic full) /!\
 
 Currently working on : init_sawyer
 
