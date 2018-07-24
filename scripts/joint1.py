@@ -3,18 +3,22 @@
 import rospy
 from std_msgs.msg import Float64
 
-def joint1():
-    pub = rospy.Publisher('/robot/right_joint_position_controller/joints/right_j1_controller/command', Float64, queue_size=10)
+#Control the movement of the 6th joint
+#type is a string to specify the mode of the controller : 'position', 'effort' or 'velocity'
+#value is the value (float) you want to give to your controller
+
+def joint1(type,value):
+    string='/robot/right_joint_' + type +'_controller/joints/right_j1_controller/command'
+    pub = rospy.Publisher(string, Float64, queue_size=10)
     rospy.init_node('talker', anonymous=True)
     rate = rospy.Rate(10) # 10hz
-    for i in range(10):
-    	hello_str = 0.9
-    	rospy.loginfo(hello_str)
-    	pub.publish(hello_str)
+    for i in range(5):
+    	rospy.loginfo(value)
+    	pub.publish(value)
     	rate.sleep()
 
 if __name__ == '__main__':
     try:
-        joint1()
+        joint1("position",0.9)
     except rospy.ROSInterruptException:
         pass
