@@ -10,7 +10,7 @@ Various programs made to use the Sawyer robotic arm. The codes are available in 
 	ROS Kinetic
 	Gazebo 7 (by default, installed with ROS kinetic full) /!\
 
-Currently working on : init_sawyer
+Currently working on : get_image_test
 
 TO USE THESE CODES ON A SIMULATOR :
 
@@ -29,11 +29,22 @@ TO USE THESE CODES ON A SIMULATOR :
 -Source your devel folder :
 	source devel/setup.bash
 
-You are now good to go. If you have any problem, feel free to contact the author by email at :
+You have installed the different folders and are now good to go. If you have any problem, feel free to contact the author by email at :
 quentin.olivier1996@gmail.com
 Or google your error. There is plenty of good tutorial out there for you to find a solution.
+
+To run run them, you need to start the simulated Intera environment. Then, you just have to type the following command to launch the Gazebo simulation :
+	roslaunch sawyer_gazebo sawyer_world.launch
+
+Then, in another terminal, launch the script you want :
+	python <script>
+We recommand starting by the init_sawyer script.
 
 THESE CODES HAVEN'T BEEN TESTED ON THE ACTUAL ROBOT, PROCEED WITH CAUTION.
 THE TEAM DECLINES ALL RESPONSABILTY IN CASE OF MECHANICAL DAMAGE.
 FOR NOW, WE STRONGLY ADVISE AGAINST THE USE OF THESE PROGRAMS WITH THE REAL ROBOT
 WITHOUT ADEQUATE TESTING AND VERIFICATIONS BEFOREHAND. 
+
+
+You can use these codes as templates to learn a bit about Sawyer, Gazebo and to build you own programs. The file Info.txt compiles different informations useful when coding for the Sawyer simulation such as ROS topics to which you can subscribe, ROS commands, tips. We also recommand checking the ROS tutorials before if you are knew to this, they are really helpful and well-done.
+Enjoy !
