@@ -8,6 +8,7 @@ import joint4
 import joint5
 import joint6
 import rospy
+import init_sawyer_0
 from std_msgs.msg import Float64
 
 #Initialize the robot in a basic position that doesn't take a lot of space
@@ -23,6 +24,7 @@ def init():
 
 if __name__ == '__main__':
     try:
+	init_sawyer_0.init()
         init()
     except rospy.ROSInterruptException:
         pass
