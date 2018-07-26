@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(test_code)
+project(SawyerRoboticArmSimulation)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -9,8 +9,10 @@ project(test_code)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
+  intera_core_msgs
   roscpp
   rospy
+  intera_interface
   std_msgs
 )
 
