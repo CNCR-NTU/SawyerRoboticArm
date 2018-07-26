@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>SawyerRoboticArmSimulation</name>
+  <name>sawyer_robot_simulation</name>
   <version>1.2.0</version>
   <description>Package used to move Sawyer in the gazebo simulation</description>
   <maintainer email="quentin.olivier1996@gmail.com">quentin</maintainer>
