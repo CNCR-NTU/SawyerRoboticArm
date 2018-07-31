@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import numpy as np
+import sys, getopt
 
 import os
 import cv2
@@ -9,8 +10,6 @@ from cv_bridge import CvBridge, CvBridgeError
 import rospy
 import intera_interface
 from sensor_msgs.msg import Image
-
-filename = 'video.avi'
 
 VIDEO_TYPE = {
     'avi': cv2.VideoWriter_fourcc(*'XVID'),
@@ -22,6 +21,7 @@ VIDEO_TYPE = {
 def record_callback(img_data, (edge_detection, window_name,video_writer)):
     """The callback function to record image by using CvBridge and cv
     """
+    #Conversion of the video and requested algorithms
     bridge = CvBridge()
     try:
         cv_image = bridge.imgmsg_to_cv2(img_data, "bgr8")
@@ -37,10 +37,7 @@ def record_callback(img_data, (edge_detection, window_name,video_writer)):
         cv_image = np.hstack([get_edge])
     edge_str = "(Edge Detection)" if edge_detection else ''
 
-    #height, width = cv_image.shape[:2]
-
-    #print height
-    #print width
+    #Record the frame
     video_writer.write(cv_image)
     cv2.waitKey(3)
 
@@ -58,10 +55,6 @@ def main():
     #Read the parameters called for the execution of the script
     rp = intera_interface.RobotParams()
     valid_cameras = rp.get_camera_names()
-    if not valid_cameras:
-        rp.log_message(("Cannot detect any camera_config"
-            " parameters on this robot. Exiting."), "ERROR")
-        return
     arg_fmt = argparse.RawDescriptionHelpFormatter
     parser = argparse.ArgumentParser(formatter_class=arg_fmt,
                                      description=main.__doc__)
@@ -80,18 +73,33 @@ def main():
     parser.add_argument(
         '-x', '--exposure', type=float,
         help='Set exposure for camera (-1 = auto)')
+    parser.add_argument(
+        '-f', '--filename', type=str, default="Sawyer_recording.avi",
+        help='Setup filename for recording')
     args = parser.parse_args(rospy.myargv()[1:])
+    
+    #######################
 
     #Create the video writer
-    out = cv2.VideoWriter(filename,cv2.VideoWriter_fourcc('M','J','P','G'), 10, (1280,800))
+    width=1280
+    height=800
+    if args.camera=="right_hand_camera" :
+	width=752
+	height=480
+    if args.filename=="Sawyer_recording.avi":
+	print( "\n\nUsing the default filename ! You might erase the previous default recording this way. Do you wish to continue ?\n")
+	print("Ctrl-c to quit, ENTER to continue...\n\n")
+	raw_input()
+    out = cv2.VideoWriter(args.filename,cv2.VideoWriter_fourcc('M','J','P','G'), 24, (width,height))
     if not out.isOpened():
 	print("Video writer not open !\n")
 	print("Shutdown...\n\n")
 	return
+    ########################
 
     #Setting the node and starting the communication with the camera
     print("Initializing node... ")
-    rospy.init_node('camera_display', anonymous=True)
+    rospy.init_node('recording_camera', anonymous=True)
     cameras = intera_interface.Cameras()
     if not cameras.verify_camera_exists(args.camera):
         rospy.logerr("Could not detect the specified camera, exiting the example.")
