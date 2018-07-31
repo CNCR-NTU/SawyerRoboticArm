@@ -1,22 +1,14 @@
 #!/usr/bin/env python
 import argparse
 import numpy as np
-import sys, getopt
-
 import os
 import cv2
 from cv_bridge import CvBridge, CvBridgeError
-
 import rospy
 import intera_interface
 from sensor_msgs.msg import Image
 
-VIDEO_TYPE = {
-    'avi': cv2.VideoWriter_fourcc(*'XVID'),
-    #'mp4': cv2.VideoWriter_fourcc(*'H264'),
-    'mp4': cv2.VideoWriter_fourcc(*'XVID'),
-}
-
+#Allows the user to record a video with one of the Sawyer camera
 
 def record_callback(img_data, (edge_detection, window_name,video_writer)):
     """The callback function to record image by using CvBridge and cv

@@ -2,10 +2,16 @@
 
 import rospy
 import intera_interface
-import init_sawyer_0
-import move_joints
+import move_position
 
-limb= init_sawyer_0.__init__()
-move_joints.j5(limb,2)
-move_joints.j3(limb,-2.2)
-move_joints.j1(limb,0.9)
+def __init__():
+	move_position.move([0,0,0,0,0,0,0])
+	move_position.move([0,0.9,0,-2.2,0,2,0])
+
+if __name__ == '__main__':
+    try:
+	print("Initializing node...\n")
+	rospy.init_node('Init',anonymous=True)
+        __init__()
+    except rospy.ROSInterruptException:
+        pass
