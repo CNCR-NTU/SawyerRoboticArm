@@ -8,9 +8,15 @@ import rospy
 import intera_interface
 from sensor_msgs.msg import Image
 
-#Allows the user to record a video with one of the Sawyer camera
+## @file record_camera.py
+# 
+# \brief Script used to record the video feed of a selected camera.
 
-def record_callback(img_data, (edge_detection, window_name,video_writer)):
+##Callbak function to record the video.
+#
+# \param edge_detection a boolean used to verify if edge detection is activated
+# \param video_writer cv;VideoWriter object created to record
+def record_callback(img_data, (edge_detection, video_writer)):
     """The callback function to record image by using CvBridge and cv
     """
     #Conversion of the video and requested algorithms
@@ -33,7 +39,11 @@ def record_callback(img_data, (edge_detection, window_name,video_writer)):
     video_writer.write(cv_image)
     cv2.waitKey(3)
 
-
+## \brief Main function to record the video.   
+#    Initialize the ROS node and read the arguments given when launching the script
+#    The arguments can include the choice of the camera, the type of image displayed
+#    (raw, corrected or with edge detection), gain and exposure and the title of the video 
+##
 def main():
     """Camera Display Example
 

@@ -9,9 +9,18 @@ import rospy
 import intera_interface
 from sensor_msgs.msg import Image
 
+## @file display_camera.py
+# 
+# \brief Script used to display the video feed of a selected camera on the monitor.
+
+##Callbak function to display the video.
+#
+# \param edge_detection a boolean used to verify if edge detection is activated
+# \param window_name name of the displaying window
 def show_image_callback(img_data, (edge_detection, window_name)):
-    """The callback function to show image by using CvBridge and cv
-    """
+    
+    
+
     bridge = CvBridge()
     try:
         cv_image = bridge.imgmsg_to_cv2(img_data, "bgr8")
@@ -32,8 +41,13 @@ def show_image_callback(img_data, (edge_detection, window_name)):
     cv2.imshow(cv_win_name, cv_image)
     cv2.waitKey(3)
 
-
+## \brief Main function to display the video.   
+#    Initialize the ROS node and read the arguments given when launching the script
+#    The arguments can include the choice of the camera, the type of image displayed
+#    (raw, corrected or with edge detection), gain and exposure
+##
 def main():
+    
     """Camera Display Example
 
     Cognex Hand Camera Ranges

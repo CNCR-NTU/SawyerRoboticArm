@@ -22,6 +22,12 @@ import rospy
 
 import intera_interface
 
+## \file enable_robot.py
+# 
+# \brief Script to enable the motors of the Sawyer robot
+# \details This is the script provided by Intera
+##
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--state', const='state',
