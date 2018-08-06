@@ -37,7 +37,13 @@ def record_callback(img_data, (edge_detection, video_writer,joint_file,limb)):
 
     #Record the frame
     video_writer.write(cv_image)
-	joint_file.write(limb.joint_angles())
+    angle=limb.joint_angles()
+    send=""
+    for i in range(7):
+        a=angle["right_j"+`i`]
+        send=send+`a`+" "
+    send=send +"\n"
+    joint_file.write(send)
     cv2.waitKey(3)
 
 ## \brief Main function to record the video.   
@@ -122,12 +128,11 @@ def main():
             rospy.loginfo("Exposure set to: {0}".format(cameras.get_exposure(args.camera)))
 
 	#Create file to record joint positions, and limb object
-	F = open(args.filename+".txt","w")
-	limb = intera_interface.Limb('right')
+    F = open(args.filename+".txt","w")
+    limb = intera_interface.Limb('right')
 
 	#Set the callback function
-	cameras.set_callback(args.camera, record_callback,
-		    rectify_image=rectify_image, callback_args=(use_canny_edge, args.camera, out,F,limb))
+    cameras.set_callback(args.camera, record_callback, rectify_image=rectify_image, callback_args=(use_canny_edge, out, F, limb))
 
     #Clean shutdown function
     def clean_shutdown():

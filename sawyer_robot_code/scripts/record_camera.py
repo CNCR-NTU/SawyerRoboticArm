@@ -111,7 +111,7 @@ def main():
     rectify_image = not args.raw
     use_canny_edge = args.edge
     cameras.set_callback(args.camera, record_callback,
-        rectify_image=rectify_image, callback_args=(use_canny_edge, args.camera, out))
+        rectify_image=rectify_image, callback_args=(use_canny_edge, out))
 
     # optionally set gain and exposure parameters
     if args.gain is not None:
