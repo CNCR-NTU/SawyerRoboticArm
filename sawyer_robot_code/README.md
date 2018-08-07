@@ -35,11 +35,11 @@ Or google your error. There is plenty of good tutorial out there for you to find
 # Use the package
 
 To run run them, you need to start the Intera environment :
-	* cd ~/ros_ws
-	* ./intera.sh 
+* cd ~/ros_ws
+* ./intera.sh 
 	
 Then, launch the script you want :
-	* rosrun sawyer_robot_code <desired script>
+* rosrun sawyer_robot_code <desired script>
 
 You can use several terminals to launch several scripts at once, but all the terminal you want to use must be running the Intera environment.
 
