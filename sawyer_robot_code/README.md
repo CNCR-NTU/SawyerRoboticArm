@@ -16,7 +16,7 @@ To install this package and everything needed for it to run, please follow these
 	- http://wiki.ros.org/kinetic/Installation
 
 * Follow the following installation tutorial :
-	- http://sdk.rethinkrobotics.com/intera/Gazebo_Tutorial
+	- http://sdk.rethinkrobotics.com/intera/Workstation_Setup
 
 * Clone this repository in the src folder of your workstation
 
@@ -34,16 +34,16 @@ Or google your error. There is plenty of good tutorial out there for you to find
 
 # Use the package
 
-To run run them, you need to start the simulated Intera environment :
+To run run them, you need to start the Intera environment :
 	* cd ~/ros_ws
 	* ./intera.sh 
 	
-Then, in another terminal, launch the script you want :
-	* cd ~/ros_ws
-	* ./intera.sh 
+Then, launch the script you want :
 	* rosrun sawyer_robot_code <desired script>
 
-We recommand starting by the init_sawyer script.
+You can use several terminals to launch several scripts at once, but all the terminal you want to use must be running the Intera environment.
+
+We recommand starting by the init_sawyer.py script.
 
 THESE CODES ARE STRICTLY DEDICATED TO THE ROBOT.
 THEY DON'T WORK ON THE SIMULATION ON GAZEBO.
