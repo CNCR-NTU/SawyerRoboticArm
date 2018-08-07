@@ -1,3 +1,4 @@
+# Sawyer robot simulation :
 
 Various programs made to use the Sawyer robotic arm. The codes are available in the scripts folder.
 
@@ -7,6 +8,8 @@ Various programs made to use the Sawyer robotic arm. The codes are available in 
 	* Ubuntu 16.04 64bit
 	* ROS Kinetic
 	* Gazebo 7 (by default, installed with ROS kinetic full) 
+
+# Installation 
 
 To install this package and everything needed for it to run, please follow these steps :
 * Install ROS Kinetic :
@@ -28,6 +31,8 @@ You have installed the different folders and are now good to go. If you have any
 email at :
 quentin.olivier1996@gmail.com
 Or google your error. There is plenty of good tutorial out there for you to find a solution.
+
+# Use the package
 
 To run run them, you need to start the simulated Intera environment :
 	* cd ~/ros_ws
