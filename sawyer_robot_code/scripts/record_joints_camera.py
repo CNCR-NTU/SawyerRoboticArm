@@ -11,6 +11,11 @@ from sensor_msgs.msg import Image
 ## @file record_camera.py
 # 
 # \brief Script used to record the video feed of a selected camera, and the corresponding joint positions for each frame.
+# \details The recorded video and the position log will be saved in the folder selected by your terminal when you are launching the script. Contrary to record_camera.py, you must not add the extension at the end of the name of the file (e.g "<filename>.avi", or else the video writer won't open. Just write "<filename>", the right extensions will be used automatically.
+# The video is stored in .avi format, and the log is a .txt file in the following format :
+# ANGLE0 ANGLE1 ANGLE2 ANGLE3 ANGLE4 ANGLE5 ANGLE6 
+# ANGLE0 ANGLE1 ....
+# with each line corresponding to a frame of the video.
 
 ##Callbak function to record the video and position.
 #
@@ -97,7 +102,7 @@ def main():
 	height=480
     if args.filename=="Sawyer_recording":
 	print( "\n\nUsing the default filename ! You might erase the previous default recording this way. Do you wish to continue ?\n")
-	print("Ctrl-c to quit, ENTER to continue...\n\n")
+	print("[Ctrl-c to quit, ENTER to continue...]\n\n")
 	raw_input()
     out = cv2.VideoWriter(args.filename+".avi",cv2.VideoWriter_fourcc('M','J','P','G'), 24, (width,height))
     if not out.isOpened():

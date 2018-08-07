@@ -11,6 +11,7 @@ from sensor_msgs.msg import Image
 ## @file record_camera.py
 # 
 # \brief Script used to record the video feed of a selected camera.
+# \details The recorded video will be saved in the folder selected by your terminal when you are launching the script. You have to add the extension at the end of the name of the file (e.g "<filename>.avi", or else the video writer won't open.
 
 ##Callbak function to record the video.
 #
