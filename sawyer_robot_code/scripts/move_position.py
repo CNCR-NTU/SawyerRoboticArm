@@ -26,7 +26,6 @@ def move(angles):
 ##Main function.
 #
 # \details Transform the arguments given to the script into a tab. Provides help if needed and warning messages.
-
 def main():
     """Move Position Example
 
