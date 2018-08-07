@@ -5,9 +5,9 @@ Various programs made to use the Sawyer robotic arm. The codes are available in 
 /!\ This repository is still being tested. The programs are work-in-progress,
     so take care when using them. Tests are advised before definite use. 
     It is made to run on the following configuration :
-	* Ubuntu 16.04 64bit
-	* ROS Kinetic
-	* Last version of Intera at the time of writing
+* Ubuntu 16.04 64bit
+* ROS Kinetic
+* Last version of Intera at the time of writing
 
 # Installation 
 
@@ -36,25 +36,21 @@ Or google your error. There is plenty of good tutorial out there for you to find
 
 To run run them, you need to start the simulated Intera environment :
 	* cd ~/ros_ws
-	* ./intera.sh sim
-
-Then, you just have to type the following command to launch 
-the Gazebo simulation :
-	* roslaunch sawyer_gazebo sawyer_world.launch
-
+	* ./intera.sh 
+	
 Then, in another terminal, launch the script you want :
 	* cd ~/ros_ws
-	* ./intera.sh sim
-	* rosrun sawyer_robot_simulation <desired script>
+	* ./intera.sh 
+	* rosrun sawyer_robot_code <desired script>
 
 We recommand starting by the init_sawyer script.
 
-THESE CODES ARE STRICTLY DEDICATED TO THE SIMULATION.
-THEY DON'T WORK ON THE ACTUAL ROBOT.
-CHECK THE OTHER PACKAGE IF YOU WANT TO GET STARTED ON THE SAWYER ROBOT.
+THESE CODES ARE STRICTLY DEDICATED TO THE ROBOT.
+THEY DON'T WORK ON THE SIMULATION ON GAZEBO.
+CHECK THE OTHER PACKAGE IF YOU WANT TO GET STARTED ON THE SAWYER SIMULATION.
 
-You can use these codes as templates to learn a bit about Sawyer, Gazebo and to build you own programs. The file Info.txt 
-compiles different informations useful when coding for the Sawyer simulation such as ROS topics to which you can subscribe, 
+You can use these codes as templates to learn a bit about Sawyer and to build you own programs. The file Info.txt 
+compiles different informations useful when coding for the Sawyer robotic arm such as ROS topics to which you can subscribe, 
 ROS commands, tips. We also recommand checking the ROS tutorials before if you are knew to this, they are really helpful 
 and well-done.
 Enjoy !
