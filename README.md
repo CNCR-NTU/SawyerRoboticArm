@@ -8,7 +8,7 @@ This repository is a ROS package, providing code for the Sawyer robotic arm :
 * sawyer_robot_simulation will help you getting started with the Gazebo simulator
 * sawyer_robot_code will help you working on the actual robot
 
-These folders contain scripts ready to be used on their own, or useful functions to help you use Sawyer more easily.
+These folders contain scripts ready to be used on their own, or useful functions to help you use Sawyer more easily. Once you will have set everything, you will be able to import these script as Python modules if you want to write your own program.
 
 This repository is still being worked on. Don't hesitate to contact the maintainer of each package in case of any problem.
 If you want to work on the code itself, documentation is provided in the doc file. Open files.html to open the documentation in your browser.
