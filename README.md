@@ -7,6 +7,7 @@ This repository was created for Sawyer Robotic Arm.
 This repository is a ROS package, providing code for the Sawyer robotic arm :
 * sawyer_robot_simulation will help you getting started with the Gazebo simulator
 * sawyer_robot_code will help you working on the actual robot
+
 These folders contain scripts ready to be used on their own, or useful functions to help you use Sawyer more easily.
 
 This repository is still being worked on. Don't hesitate to contact the maintainer of each package in case of any problem.
@@ -15,7 +16,7 @@ If you want to work on the code itself, documentation is provided in the doc fil
 ## Installation
 
 The wiki provides a detailed guide on how to install everything to get started on Sawyer. It condenses several official tutorials, the manual and some insight of the team, to have every important information in one place. Follow the link to see the wiki :
-
+https://github.com/CNCR-NTU/SawyerRoboticArm/wiki
 
 ## Authors
 Quentin Olivier <quentin.olivier@ntu.ac.uk>
