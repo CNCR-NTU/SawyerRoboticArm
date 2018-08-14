@@ -16,7 +16,9 @@ import argparse
 def __init__():
 	head=intera_interface.Head()
 	head.set_pan(0.0)
-	sawyer_robot_code.move_position.move([0,0,0,0,0,0,0])
+	limb=intera_interface.Limb("right")
+	limb.set_joint_position_speed(0.15)
+	sawyer_robot_code.move_position.move([0,0,0,0,0,0,3.3])
 	sawyer_robot_code.move_position.move([0,0.9,0,-2.2,0,2,3.3])
 	print("\nExiting...\n")
 

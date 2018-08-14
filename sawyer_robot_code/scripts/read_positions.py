@@ -3,7 +3,7 @@ import argparse
 import rospy
 import sys
 import intera_interface
-import move_position
+from sawyer_robot_code import move_position
 
 ## @file read_positions.py
 # 
