@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['anonymous',['anonymous',['../namespaceinit__sawyer.html#a9db40615df3618d0baf4515410f32ab4',1,'init_sawyer.anonymous()'],['../namespacemove__position.html#a235d86d80271a85b3a986be2a908ec89',1,'move_position.anonymous()']]]
+  ['angles',['angles',['../namespacesawyer__robot__code_1_1get__joint.html#a222b4167551d9b81f4de14d6088cf055',1,'sawyer_robot_code::get_joint']]],
+  ['anonymous',['anonymous',['../namespacesawyer__robot__code_1_1get__joint.html#a548190f6993f6af2d7040415fe69404e',1,'sawyer_robot_code.get_joint.anonymous()'],['../namespacesawyer__robot__code_1_1init__sawyer.html#a4da33230c4e5eaf9b0e0f134f43a1b7e',1,'sawyer_robot_code.init_sawyer.anonymous()'],['../namespacesawyer__robot__code_1_1move__position.html#abcb270bd3326677d5d76a3450565382b',1,'sawyer_robot_code.move_position.anonymous()']]]
 ];

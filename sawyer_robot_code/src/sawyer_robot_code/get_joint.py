@@ -2,10 +2,8 @@
 
 import rospy
 import intera_interface
-import sys, getopt
-import argparse
 
-## @file print_joint.py
+## @file get_joint.py
 # 
 # \brief Script used to print the current joint positions of the robot.
 

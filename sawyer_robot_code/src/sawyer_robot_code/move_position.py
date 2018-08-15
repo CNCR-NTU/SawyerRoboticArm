@@ -54,5 +54,6 @@ if __name__ == '__main__':
 	print "[Initializing ROS node...]\n"
 	rospy.init_node('Move_position',anonymous=True)
         main()
+	print "Exiting the script...\n"
     except rospy.ROSInterruptException:
         pass

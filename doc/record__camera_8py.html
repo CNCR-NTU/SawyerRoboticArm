@@ -113,6 +113,9 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Script used to record the video feed of a selected camera. </p>
+<p class="">Script used to record the video feed of a selected camera, and the corresponding joint positions for each frame.</p>
+<p class="">The recorded video will be saved in the folder selected by your terminal when you are launching the script. You have to add the extension at the end of the name of the file (e.g "&lt;filename&gt;.avi", or else the video writer won't open.</p>
+<p class="">The recorded video and the position log will be saved in the folder selected by your terminal when you are launching the script. Contrary to <a class="el" href="record__camera_8py.html" title="Script used to record the video feed of a selected camera.">record_camera.py</a>, you must not add the extension at the end of the name of the file (e.g "&lt;filename&gt;.avi", or else the video writer won't open. Just write "&lt;filename&gt;", the right extensions will be used automatically. The video is stored in .avi format, and the log is a .txt file in the following format : ANGLE0 ANGLE1 ANGLE2 ANGLE3 ANGLE4 ANGLE5 ANGLE6 ANGLE0 ANGLE1 .... with each line corresponding to a frame of the video. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

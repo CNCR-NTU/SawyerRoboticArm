@@ -39,7 +39,7 @@ def show_image_callback(img_data, (edge_detection, window_name)):
     _image_pub.publish(img)
 
 ## \brief Main function to display the video.   
-#    Initialize the ROS node and read the arguments given when launching the script
+# \details Initialize the ROS node and read the arguments given when launching the script
 #    The arguments can include the choice of the camera, the type of image displayed
 #    (raw, corrected or with edge detection), gain and exposure
 ##

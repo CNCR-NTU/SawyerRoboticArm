@@ -52,7 +52,7 @@ def record_callback(img_data, (edge_detection, video_writer,joint_file,limb)):
     cv2.waitKey(3)
 
 ## \brief Main function to record the video.   
-#    Initialize the ROS node and read the arguments given when launching the script
+# \details Initialize the ROS node and read the arguments given when launching the script
 #    The arguments can include the choice of the camera, the type of image displayed
 #    (raw, corrected or with edge detection), gain and exposure and the title of the video 
 ##

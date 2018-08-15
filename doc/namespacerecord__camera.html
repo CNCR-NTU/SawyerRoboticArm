@@ -120,7 +120,8 @@ Functions</h2></td></tr>
 
 <p>Main function to record the video. </p>
 <p class=""><br />
- Initialize the ROS node and read the arguments given when launching the script The arguments can include the choice of the camera, the type of image displayed (raw, corrected or with edge detection), gain and exposure and the title of the video </p><pre class="fragment">Camera Display Example
+</p>
+<p class="">Initialize the ROS node and read the arguments given when launching the script The arguments can include the choice of the camera, the type of image displayed (raw, corrected or with edge detection), gain and exposure and the title of the video </p><pre class="fragment">Camera Display Example
 
 Cognex Hand Camera Ranges
     - exposure: [0.01-100]
@@ -167,7 +168,7 @@ Head Camera Ranges:
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edge_detection</td><td>a boolean used to verify if edge detection is activated </td></tr>
-    <tr><td class="paramname">video_writer</td><td>cv;VideoWriter object created to record <pre class="fragment">The callback function to record image by using CvBridge and cv
+    <tr><td class="paramname">video_writer</td><td>cv::VideoWriter object created to record <pre class="fragment">The callback function to record image by using CvBridge and cv
 </pre> </td></tr>
   </table>
   </dd>

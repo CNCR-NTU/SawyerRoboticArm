@@ -2,8 +2,9 @@
 
 import rospy
 import intera_interface
-import sawyer_robot_code.move_position
-import sys, getopt
+from sawyer_robot_code import move_position
+from sawyer_robot_code import get_joint
+from sawyer_robot_code import move_joints
 import argparse
 
 ## @file init_sawyer.py
@@ -12,22 +13,34 @@ import argparse
 
 ##Main function to initialize the position.
 #
-# Start by setting all the position to 0, then sets the robot to a neutral position.
+# \details Start by setting the robot to a slow speed, all the position to 0, then sets the robot to a neutral position.
 def __init__():
 	head=intera_interface.Head()
 	head.set_pan(0.0)
 	limb=intera_interface.Limb("right")
 	limb.set_joint_position_speed(0.15)
-	sawyer_robot_code.move_position.move([0,0,0,0,0,0,3.3])
-	sawyer_robot_code.move_position.move([0,0.9,0,-2.2,0,2,3.3])
-	print("\nExiting...\n")
-
+	angle=get_joint.main()
+	if((angle[1]<0.89)or(angle[1]>0.91)):
+		move_position.move([0,0,0,0,0,0,3.3])
+		move_position.move([0,0.9,0,-2.2,0,2,3.3])
+	elif((angle[3]<-2.21)or(angle[3]>-2.19)):
+		move_position.move([0,0,0,0,0,0,3.3])
+		move_position.move([0,0.9,0,-2.2,0,2,3.3])
+	elif((angle[5]<1.99)or(angle[5]>2.01)):
+		move_position.move([0,0,0,0,0,0,3.3])
+		move_position.move([0,0.9,0,-2.2,0,2,3.3])
+	elif((angle[6]<3.2)or(angle[6]>3.4)):
+		move_joints.j6(3.3)
+	
+##Set the Sawyer robot in the Intera neutral position, with a slow speed 
+#
+# \details Start by setting the robot to a slow speed, all the position to 0, then sets the robot to a neutral position.
 def neutral():
 	head=intera_interface.Head()
 	head.set_pan(0.0)
 	limb=intera_interface.Limb("right")
+	limb.set_joint_position_speed(0.15)
 	limb.move_to_neutral()
-	print("\nExiting...\n")
 
 def main():
     """Init Sawyer
@@ -52,5 +65,6 @@ if __name__ == '__main__':
 	print("\n[Initializing node...]\n")
 	rospy.init_node('Init',anonymous=True)
         main()
+	print("\nExiting...\n")
     except rospy.ROSInterruptException:
         pass

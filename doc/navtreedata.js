@@ -25,6 +25,8 @@ var NAVTREE =
 [
   [ "SawyerRoboticArm", "index.html", [
     [ "CNCR Lab @ NTU - Sawyer Robotic Arm", "md_README.html", null ],
+    [ "Sawyer robot code", "md_sawyer_robot_code_README.html", null ],
+    [ "Sawyer robot simulation :", "md_sawyer_robot_simulation_README.html", null ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [

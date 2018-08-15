@@ -16,7 +16,7 @@ from sensor_msgs.msg import Image
 ##Callbak function to record the video.
 #
 # \param edge_detection a boolean used to verify if edge detection is activated
-# \param video_writer cv;VideoWriter object created to record
+# \param video_writer cv::VideoWriter object created to record
 def record_callback(img_data, (edge_detection, video_writer)):
     """The callback function to record image by using CvBridge and cv
     """
@@ -41,7 +41,7 @@ def record_callback(img_data, (edge_detection, video_writer)):
     cv2.waitKey(3)
 
 ## \brief Main function to record the video.   
-#    Initialize the ROS node and read the arguments given when launching the script
+# \details Initialize the ROS node and read the arguments given when launching the script
 #    The arguments can include the choice of the camera, the type of image displayed
 #    (raw, corrected or with edge detection), gain and exposure and the title of the video 
 ##

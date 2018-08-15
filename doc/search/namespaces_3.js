@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['joint0',['joint0',['../namespacejoint0.html',1,'']]],
-  ['joint1',['joint1',['../namespacejoint1.html',1,'']]],
-  ['joint2',['joint2',['../namespacejoint2.html',1,'']]],
-  ['joint3',['joint3',['../namespacejoint3.html',1,'']]],
-  ['joint4',['joint4',['../namespacejoint4.html',1,'']]],
-  ['joint5',['joint5',['../namespacejoint5.html',1,'']]],
-  ['joint6',['joint6',['../namespacejoint6.html',1,'']]]
+  ['read_5fpositions',['read_positions',['../namespaceread__positions.html',1,'']]],
+  ['record_5fcamera',['record_camera',['../namespacerecord__camera.html',1,'']]],
+  ['record_5fjoints_5fcamera',['record_joints_camera',['../namespacerecord__joints__camera.html',1,'']]]
 ];

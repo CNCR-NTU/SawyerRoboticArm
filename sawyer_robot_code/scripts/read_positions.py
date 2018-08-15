@@ -47,7 +47,7 @@ def convert(angle_str):
 
 ## Main function.
 #
-#
+# \details Read the name of the file to open
 def main():
 	"""Read_positions :
 	
