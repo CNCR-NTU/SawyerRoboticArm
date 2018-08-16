@@ -17,7 +17,7 @@ from sawyer_robot_code import move_position
 # \param error int, the specific error code
 def clean_shutdown(node,error):	
 	if node==True:
-		print "[Shutting down the node...]\n"
+		print "\n[Shutting down the node...]\n"
 	print "Exiting...\n\n"
 	sys.exit(error)
 
@@ -26,6 +26,8 @@ def clean_shutdown(node,error):
 # \details The file must be in the current folder of the terminal launching the script
 # \param filename the name of the file to read
 def read_pos(filename):
+	limb=intera_interface.Limb("right")
+	limb.set_joint_position_speed(0.15)
 	with open(filename,"r") as f:
 		data= f.readlines()
 	
@@ -68,5 +70,6 @@ def main():
 	read_pos(args.filename)	
 
 if __name__ == '__main__':
+	
 	main()
 

@@ -18,16 +18,14 @@ from sawyer_robot_code import get_joint
 # \param filename passing argument for the name of the file to write
 def wait(filename):
 	#Check if the robot moved
-	
 	angle_start=get_joint.main()
 	flag=0
-	if(flag=0):
+	while(flag==0):
 		angle=get_joint.main()
 		for i in range(7):
 			if((angle[i]<angle_start[i]-0.01)or(angle[i]>angle_start[i]+0.01)):
 				flag=1
-	else:
-		main(filename)
+	main(filename)
 	
 
 ## \brief Main function to record the positions.   
@@ -36,14 +34,16 @@ def wait(filename):
 def main(filename):
 	#Create file to record joint positions, and limb object
 	F = open(filename,"w")
-	while(1):
+	print "Recording positions...\n"
+	flag=True
+	while(flag):
 		angle=get_joint.main()
 		send=""
 		for i in range(7):
 			a=angle[i]
 			send=send+`a`+" "
-			send=send +"\n"
-		joint_file.write(send)
+		send=send +"\n"
+		F.write(send)
 
 def __init__():
 	"""Record joints 
@@ -56,7 +56,7 @@ def __init__():
                                      description=main.__doc__)
 	parser.add_argument('-f', '--filename', type=str, default="Sawyer_recording.txt",
         help='Setup filename for recording')
-	parser.add_argument('-w', '--wait', type=bool, default=False,
+	parser.add_argument('-w', '--wait', action='store_true',
         help='Enable waiting for movement')
 	args = parser.parse_args(rospy.myargv()[1:])
 	#######################
@@ -65,10 +65,22 @@ def __init__():
 		print( "\n\nUsing the default filename ! You might erase the previous default recording this way. Do you wish to continue ?\n")
 		print("[Ctrl-c to quit, ENTER to continue...]\n\n")
 		raw_input()
-	if args.wait:
+	#Setting the node and starting the communication with the camera
+	print("Initializing node... ")
+	rospy.init_node('recording_joints', anonymous=True)
+	rospy.loginfo("Recording node running. Ctrl-c to quit")
+	if args.wait is not None:
 		wait(args.filename)
 	else:
 		main(args.filename)
+
+	#Clean shutdown function
+	def clean_shutdown():
+		print("Shutting down recording node.")
+
+	rospy.on_shutdown(clean_shutdown)
+	
+
 
 
 if __name__ == '__main__':
