@@ -8,7 +8,7 @@ import rospy
 import intera_interface
 from sensor_msgs.msg import Image
 
-## @file record_camera.py
+## @file record_joints_camera.py
 # 
 # \brief Script used to record the video feed of a selected camera, and the corresponding joint positions for each frame.
 # \details The recorded video and the position log will be saved in the folder selected by your terminal when you are launching the script. Contrary to record_camera.py, you must not add the extension at the end of the name of the file (e.g "<filename>.avi", or else the video writer won't open. Just write "<filename>", the right extensions will be used automatically.
