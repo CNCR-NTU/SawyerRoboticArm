@@ -1,10 +1,10 @@
 # CNCR Lab @ NTU - Sawyer Robotic Arm
 
-This repository was created for Sawyer Robotic Arm.
+This repository was created for using the Sawyer Robotic Arm with ROS. It has been developped on **Ubuntu 16.04** and for **ROS kinetic**
 
 ## Details
 
-This repository is a ROS package, providing code for the Sawyer robotic arm :
+This repository contains two ROS packages, providing Python libraries and code for the Sawyer robotic arm :
 * sawyer_robot_simulation will help you getting started with the Gazebo simulator
 * sawyer_robot_code will help you working on the actual robot
 
