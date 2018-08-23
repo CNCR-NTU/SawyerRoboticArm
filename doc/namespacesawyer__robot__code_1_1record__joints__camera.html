@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SawyerRoboticArm: display_camera_head Namespace Reference</title>
+<title>SawyerRoboticArm: sawyer_robot_code.record_joints_camera Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,7 +67,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('namespacedisplay__camera__head.html','');});
+$(document).ready(function(){initNavTree('namespacesawyer__robot__code_1_1record__joints__camera.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -89,28 +89,28 @@ $(document).ready(function(){initNavTree('namespacedisplay__camera__head.html','
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">display_camera_head Namespace Reference</div>  </div>
+<div class="title">sawyer_robot_code.record_joints_camera Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4f628ccbcdb317c3e230677ae82f6fff"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedisplay__camera__head.html#a4f628ccbcdb317c3e230677ae82f6fff">show_image_callback</a> (img_data, edge_detection, window_name)</td></tr>
-<tr class="memdesc:a4f628ccbcdb317c3e230677ae82f6fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callbak function to display the video.  <a href="#a4f628ccbcdb317c3e230677ae82f6fff">More...</a><br /></td></tr>
-<tr class="separator:a4f628ccbcdb317c3e230677ae82f6fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cd2fea07ed3de51605b45531ebc408e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedisplay__camera__head.html#a3cd2fea07ed3de51605b45531ebc408e">main</a> ()</td></tr>
-<tr class="memdesc:a3cd2fea07ed3de51605b45531ebc408e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to display the video.  <a href="#a3cd2fea07ed3de51605b45531ebc408e">More...</a><br /></td></tr>
-<tr class="separator:a3cd2fea07ed3de51605b45531ebc408e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2144853254aff52556098f96e3992038"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesawyer__robot__code_1_1record__joints__camera.html#a2144853254aff52556098f96e3992038">record_callback</a> (img_data, edge_detection, video_writer, joint_file, limb)</td></tr>
+<tr class="memdesc:a2144853254aff52556098f96e3992038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callbak function to record the video and position.  <a href="#a2144853254aff52556098f96e3992038">More...</a><br /></td></tr>
+<tr class="separator:a2144853254aff52556098f96e3992038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecf95d33c0dadb5a891a9d37fb76049"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesawyer__robot__code_1_1record__joints__camera.html#aaecf95d33c0dadb5a891a9d37fb76049">main</a> ()</td></tr>
+<tr class="memdesc:aaecf95d33c0dadb5a891a9d37fb76049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to record the video.  <a href="#aaecf95d33c0dadb5a891a9d37fb76049">More...</a><br /></td></tr>
+<tr class="separator:aaecf95d33c0dadb5a891a9d37fb76049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3cd2fea07ed3de51605b45531ebc408e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cd2fea07ed3de51605b45531ebc408e">&#9670;&nbsp;</a></span>main()</h2>
+<a id="aaecf95d33c0dadb5a891a9d37fb76049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecf95d33c0dadb5a891a9d37fb76049">&#9670;&nbsp;</a></span>main()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def display_camera_head.main </td>
+          <td class="memname">def sawyer_robot_code.record_joints_camera.main </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -118,10 +118,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function to display the video. </p>
+<p>Main function to record the video. </p>
 <p class=""><br />
 </p>
-<p class="">Initialize the ROS node and read the arguments given when launching the script The arguments can include the choice of the camera, the type of image displayed (raw, corrected or with edge detection), gain and exposure</p><pre class="fragment">Camera Display Example
+<p class="">Initialize the ROS node and read the arguments given when launching the script The arguments can include the choice of the camera, the type of image displayed (raw, corrected or with edge detection), gain and exposure and the title of the video </p><pre class="fragment">Camera Display Example
 
 Cognex Hand Camera Ranges
     - exposure: [0.01-100]
@@ -132,14 +132,14 @@ Head Camera Ranges:
 </pre> 
 </div>
 </div>
-<a id="a4f628ccbcdb317c3e230677ae82f6fff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f628ccbcdb317c3e230677ae82f6fff">&#9670;&nbsp;</a></span>show_image_callback()</h2>
+<a id="a2144853254aff52556098f96e3992038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2144853254aff52556098f96e3992038">&#9670;&nbsp;</a></span>record_callback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def display_camera_head.show_image_callback </td>
+          <td class="memname">def sawyer_robot_code.record_joints_camera.record_callback </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>img_data</em>, </td>
@@ -154,7 +154,19 @@ Head Camera Ranges:
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>window_name</em>&#160;</td>
+          <td class="paramname"><em>video_writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>joint_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>limb</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,11 +176,12 @@ Head Camera Ranges:
       </table>
 </div><div class="memdoc">
 
-<p>Callbak function to display the video. </p>
+<p>Callbak function to record the video and position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edge_detection</td><td>a boolean used to verify if edge detection is activated </td></tr>
-    <tr><td class="paramname">window_name</td><td>name of the displaying window </td></tr>
+    <tr><td class="paramname">video_writer</td><td>cv;VideoWriter object created to record <pre class="fragment">The callback function to record image by using CvBridge and cv
+</pre> </td></tr>
   </table>
   </dd>
 </dl>
@@ -180,7 +193,7 @@ Head Camera Ranges:
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacedisplay__camera__head.html">display_camera_head</a></li>
+    <li class="navelem"><a class="el" href="namespacesawyer__robot__code.html">sawyer_robot_code</a></li><li class="navelem"><a class="el" href="namespacesawyer__robot__code_1_1record__joints__camera.html">record_joints_camera</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>

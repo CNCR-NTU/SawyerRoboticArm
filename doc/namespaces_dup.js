@@ -5,9 +5,7 @@ var namespaces_dup =
     [ "enable_robot", "namespaceenable__robot.html", null ],
     [ "init_sawyer_0", "namespaceinit__sawyer__0.html", null ],
     [ "init_sawyer_sim", "namespaceinit__sawyer__sim.html", null ],
-    [ "read_positions", "namespaceread__positions.html", null ],
     [ "record_camera", "namespacerecord__camera.html", null ],
-    [ "record_joints_camera", "namespacerecord__joints__camera.html", null ],
     [ "sawyer_robot_code", "namespacesawyer__robot__code.html", "namespacesawyer__robot__code" ],
     [ "sawyer_robot_simulation", "namespacesawyer__robot__simulation.html", "namespacesawyer__robot__simulation" ],
     [ "setup", "namespacesetup.html", null ]
