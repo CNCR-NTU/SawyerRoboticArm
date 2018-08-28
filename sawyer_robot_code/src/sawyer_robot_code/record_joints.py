@@ -48,12 +48,15 @@ def main(filename):
 def __init__():
 	"""Record joints 
 
-	Records joints positions over time, either at the beginning of the script or when the robot starts moving.
+	Records joints positions over time, either at the beginning of the script or when the robot starts moving. The recorded log will be a ".txt" log file, saved in the folder this terminal is currently in.
+
+Example :
+	rosrun sawyer_robot_code record_joints.py -w -f log.txt
 	"""
 	#Read the parameters called for the execution of the script
 	arg_fmt = argparse.RawDescriptionHelpFormatter
 	parser = argparse.ArgumentParser(formatter_class=arg_fmt,
-                                     description=main.__doc__)
+                                     description=__init__.__doc__)
 	parser.add_argument('-f', '--filename', type=str, default="Sawyer_recording.txt",
         help='Setup filename for recording')
 	parser.add_argument('-w', '--wait', action='store_true',

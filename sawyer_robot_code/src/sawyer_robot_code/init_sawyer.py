@@ -43,27 +43,25 @@ def neutral():
 	limb.move_to_neutral()
 
 def main():
-    """Init Sawyer
+"""Init Sawyer
 
-    Initialize or set in neutral position.
-    """
-    arg_fmt = argparse.RawDescriptionHelpFormatter
-    parser = argparse.ArgumentParser(formatter_class=arg_fmt,
-                                     description=main.__doc__)
-    parser.add_argument(
-        '-n', '--neutral', type=bool,default=False,
-        help='Option to change the routine to setting Sawyer in the Intera neutral position')
-    
-    args = parser.parse_args(rospy.myargv()[1:])
-    if(args.neutral==False):
-        __init__()
-    else:
-        neutral()
+Initialize or set in neutral position.
+"""
+	arg_fmt = argparse.RawDescriptionHelpFormatter
+	parser = argparse.ArgumentParser(formatter_class=arg_fmt,
+		                             description=main.__doc__)
+	parser.add_argument('-n', '--neutral', action='store_true', help='Option to change the routine to setting Sawyer in the Intera neutral position')
+	print("\n[Initializing node...]\n")
+	rospy.init_node('Init',anonymous=True)
+	args = parser.parse_args(rospy.myargv()[1:])
+	if(args.neutral is None):
+		__init__()
+	else:
+		neutral()
 
 if __name__ == '__main__':
     try:
-	print("\n[Initializing node...]\n")
-	rospy.init_node('Init',anonymous=True)
+	
         main()
 	print("\nExiting...\n")
     except rospy.ROSInterruptException:

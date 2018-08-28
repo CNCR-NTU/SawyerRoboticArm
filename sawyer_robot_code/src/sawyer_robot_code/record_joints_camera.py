@@ -57,8 +57,13 @@ def record_callback(img_data, (edge_detection, video_writer,joint_file,limb)):
 #    (raw, corrected or with edge detection), gain and exposure and the title of the video 
 ##
 def main():
-    """Camera Display Example
+    """
+Record a video (.avi) and a text (.txt) file with each frame and its relative articular position. The files will be saved in the folder this terminal is currently in.
 
+Example:
+	rosrun sawyer_robot_code record_joints_camera.py -c head_camera -f test -r -e -g 60 -x 12.6
+
+Range for the options :
     Cognex Hand Camera Ranges
         - exposure: [0.01-100]
         - gain: [0-255]

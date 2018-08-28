@@ -28,7 +28,11 @@ def move(angles):
 #
 # \details Transform the arguments given to the script into a tab. Provides help if needed and warning messages.
 def main():
-	"""Move Position Example
+	"""
+Move the robot to the given position. The given values are floats representing the angular position of each joint in radians relative to the previous one
+
+Move Position Example :
+	rosrun sawyer_robot_code move_position.py -a 1.1 0 2.5 -0.6 1.6 2.2 -2
 
 Sawyer Arm Ranges
 - j0: [-3.14 - 3.14]
