@@ -2,7 +2,7 @@
 
 import rospy
 import intera_interface
-## @file move_joints.py
+## @file move_joint.py
 # 
 # \brief Script providing functions to move individual joint.
 # \details These functions need to be used in a script where a node has been initialized.
