@@ -3,8 +3,8 @@
 import rospy
 import intera_interface
 from sawyer_robot_code import move_position
-from sawyer_robot_code import get_joint
-from sawyer_robot_code import move_joints
+from sawyer_robot_code import get_position
+from sawyer_robot_code import move_joint
 import argparse
 
 ## @file init_sawyer.py
@@ -19,7 +19,7 @@ def __init__():
 	head.set_pan(0.0)
 	limb=intera_interface.Limb("right")
 	limb.set_joint_position_speed(0.15)
-	angle=get_joint.main()
+	angle=get_position.main()
 	if((angle[1]<0.89)or(angle[1]>0.91)):
 		move_position.move([0,0,0,0,0,0,3.3])
 		move_position.move([0,0.9,0,-2.2,0,2,3.3])
@@ -30,7 +30,7 @@ def __init__():
 		move_position.move([0,0,0,0,0,0,3.3])
 		move_position.move([0,0.9,0,-2.2,0,2,3.3])
 	elif((angle[6]<3.2)or(angle[6]>3.4)):
-		move_joints.j6(3.3)
+		move_joint.j6(3.3)
 	
 ##Set the Sawyer robot in the Intera neutral position, with a slow speed 
 #
@@ -43,21 +43,21 @@ def neutral():
 	limb.move_to_neutral()
 
 def main():
-"""Init Sawyer
+	"""Init Sawyer
 
-Initialize or set in neutral position.
-"""
+	Initialize or set in neutral position.
+	"""
 	arg_fmt = argparse.RawDescriptionHelpFormatter
 	parser = argparse.ArgumentParser(formatter_class=arg_fmt,
 		                             description=main.__doc__)
-	parser.add_argument('-n', '--neutral', action='store_true', help='Option to change the routine to setting Sawyer in the Intera neutral position')
+	parser.add_argument('-n', '--neutral', type=bool,default=False, help='Option to change the routine to setting Sawyer in the Intera neutral position')
 	print("\n[Initializing node...]\n")
 	rospy.init_node('Init',anonymous=True)
 	args = parser.parse_args(rospy.myargv()[1:])
-	if(args.neutral is None):
-		__init__()
-	else:
+	if(args.neutral):
 		neutral()
+	else:
+		__init__()
 
 if __name__ == '__main__':
     try:
