@@ -1,6 +1,6 @@
 # CNCR Lab @ NTU - Sawyer Robotic Arm
 
-This repository was created for using the Sawyer Robotic Arm with ROS. It has been developped on **Ubuntu 16.04** and for **ROS kinetic**
+This repository was created for using the Sawyer Robotic Arm with ROS. It has been developped on **Ubuntu 18.04** and for **ROS melodic**
 
 ## Details
 
