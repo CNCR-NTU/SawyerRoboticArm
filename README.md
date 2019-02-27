@@ -19,15 +19,9 @@ The wiki provides a detailed guide on how to install everything to get started o
 https://github.com/CNCR-NTU/SawyerRoboticArm/wiki
 
 ## Authors
-Quentin Olivier <quentin.olivier@ntu.ac.uk>
-
-Sabrina Frohn <sabrina.sabrina@ntu.ac.uk>
-
-Pedro Machado <pedro.baptistamachado@ntu.ac.uk>
-
-Dr. Georgina Cosma <georgina.cosma@ntu.ac.uk>
-
-Prof. Martin McGinnity <martin.mcginnity@ntu.ac.uk>
+* Nikesh Lama nikesh.lama@ntu.ac.uk
+* Pedro Machado pedro.baptistamachado@ntu.ac.uk
+* Prof. Martin McGinnity martin.mcginnity@ntu.ac.uk
 
 # License
 
