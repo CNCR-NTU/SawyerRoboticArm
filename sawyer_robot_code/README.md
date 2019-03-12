@@ -41,16 +41,4 @@ To run run them, you need to start the Intera environment :
 Then, launch the script you want :
 * rosrun sawyer_robot_code <desired script>
 
-You can use several terminals to launch several scripts at once, but all the terminal you want to use must be running the Intera environment.
 
-We recommand starting by the init_sawyer.py script.
-
-THESE CODES ARE STRICTLY DEDICATED TO THE ROBOT.
-THEY DON'T WORK ON THE SIMULATION ON GAZEBO.
-CHECK THE OTHER PACKAGE IF YOU WANT TO GET STARTED ON THE SAWYER SIMULATION.
-
-You can use these codes as templates to learn a bit about Sawyer and to build you own programs. The file Info.txt 
-compiles different informations useful when coding for the Sawyer robotic arm such as ROS topics to which you can subscribe, 
-ROS commands, tips. We also recommand checking the ROS tutorials before if you are knew to this, they are really helpful 
-and well-done.
-Enjoy !
