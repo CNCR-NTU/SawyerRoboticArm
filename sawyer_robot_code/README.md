@@ -12,22 +12,17 @@ Various programs made to use the Sawyer robotic arm. The codes are available in 
 # Installation 
 
 To install this package and everything needed for it to run, please follow these steps :
-* Install ROS Kinetic :
-	- http://wiki.ros.org/kinetic/Installation
+* Install [ROS Melodic](http://wiki.ros.org/melodic/Installation)
 
-* Follow the following installation tutorial :
-	- http://sdk.rethinkrobotics.com/intera/Workstation_Setup
+* Follow the following the [Sawyer installation tutorial](http://sdk.rethinkrobotics.com/intera/Workstation_Setup)
 
-* Clone this repository in the src folder of your workstation
-
-* Go into the root folder of your workstation and build your project :
-	- cd ~/catkin_ws (by default when following  the installation tutorial)
-	- catkin_make
-
-* Source your devel folder :
+* Clone this repository to ROS workspace
 ```
-$ echo "source $HOME/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
-$ source $HOME/.bashrc
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/CNCR-NTU/SawyerRoboticArm.git
+$ cd ..
+$ catkin_make
+$ source $HOME/catkin_ws/devel/setup.bash
 ```
 
 
