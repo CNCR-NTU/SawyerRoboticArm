@@ -25,20 +25,19 @@ To install this package and everything needed for it to run, please follow these
 	- catkin_make
 
 * Source your devel folder :
-	- source devel/setup.bash
+```
+$ echo "source $HOME/catkin_ws/devel/setup.bash" >> $HOME/.bashrc
+$ source $HOME/.bashrc
+```
 
-You have installed the different folders and are now good to go. If you have any problem, feel free to contact the author by 
-email at :
-quentin.olivier1996@gmail.com
-Or google your error. There is plenty of good tutorial out there for you to find a solution.
 
-# Use the package
-
+# Starting to use the Sawyer
 To run run them, you need to start the Intera environment :
-* cd ~/catkin_ws
-* ./intera.sh 
-	
-Then, launch the script you want :
-* rosrun sawyer_robot_code <desired script>
+```
+$ cd ~/catkin_ws
+$ ./intera.sh 
+$ rosrun sawyer_robot_code init_sawyer.py
+```
+
 
 
